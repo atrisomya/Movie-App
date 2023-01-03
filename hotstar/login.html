@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://secure-media.hotstar.com/web-assets/prod/D+H_favicon.ico">
+    <style>
+        body {
+            background-color: rgb(0,31,85);
+        }
+        #container {
+            width: 35%;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+            background-color: rgb(0,31,85);
+        }
+        #form {
+            width: 90%;
+            margin: auto;
+        }
+        input {
+            width: 90%;
+            height: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        #submit {
+            height: 45px;
+            background-color: rgb(31,128,224);
+            color: white;
+            font-size: 18px;
+            font-weight: bolder;
+            border-radius: 10px;
+            border: none;
+        }
+        #submit:hover {
+            background-color: blue;
+        }
+        h1 {
+            color: white;
+        }
+        img {
+            margin-top: 50px;
+        }
+        p{
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="Error">
+    <h1>Login</h1>
+    <form id="form">
+        <input type="text" id="phoneNo" placeholder="Enter Phone Number">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="submit" value="Login" id="submit">
+    </form>
+    <p>Don't have an account? <span><a href="signup.html">Sign Up</a></span></p>
+   </div>
+</body>
+</html>
+<script>
+
+    let mbl = localStorage.getItem('mbl');
+    let password = localStorage.getItem('password');
+
+    let form = document.getElementById('form');
+    form.addEventListener('submit', myfun);
+
+    function myfun(e) {
+        e.preventDefault();
+
+        let mbll  = document.getElementById('phoneNo').value;
+        let pl  = document.getElementById('password').value;
+
+        if(mbl == mbll && password == pl) {
+            alert("Login Successful");
+            window.location.href="index.html";
+        } else {
+            alert("The credentials are wrong");
+        }
+
+    }
+</script>

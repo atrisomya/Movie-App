@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(12,17,27);
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+}
+#navbar {
+    background-color: rgb(19,26,40);
+    height: 55px;
+    width: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+#insidenav1 {
+    margin-left: 60px;
+    width: 41%;
+    display: flex;
+    justify-content: space-between;
+}
+#insidenav {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+#insidenav > button {
+    color: white;
+    background-color: rgb(31,128,224);
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+#login {
+    color: white;
+    background-color: rgb(31,128,224);
+    border-radius: 5px;
+    padding: 8px 60px;
+}
+#insidenav > button:hover {
+    background-color: blue;
+}
+#kids {
+    font-family: "Roboto","HelveticaNeue-Light",sans-serif;
+    font-weight: 800;
+    color: #db882a;
+}
+a {
+    color: white;
+    text-decoration: none;
+}

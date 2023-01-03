@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" href="https://secure-media.hotstar.com/web-assets/prod/D+H_favicon.ico">
+    <style>
+        body {
+            background-color: rgb(0,31,85);
+        }
+        #container {
+            width: 35%;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+            background-color: rgb(0,31,85);
+        }
+        #form {
+            width: 90%;
+            margin: auto;
+        }
+        input {
+            width: 90%;
+            height: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        #submit {
+            height: 45px;
+            background-color: rgb(31,128,224);
+            color: white;
+            font-size: 18px;
+            font-weight: bolder;
+            border-radius: 10px;
+            border: none;
+        }
+        #submit:hover {
+            background-color: blue;
+        }
+        h1 {
+            color: white;
+        }
+        img {
+            margin-top: 30px;
+        }
+        p {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="Error">
+    <h1>Sign up</h1>
+    <form id="form">
+        <input type="text" id="name" placeholder="Enter Name">
+        <input type="text" id="phoneNo" placeholder="Enter Phone Number">
+        <input type="password" id="password" placeholder="Enter Password">
+        <input type="submit" value="Sign up" id="submit">
+    </form>
+    <p>Already have an account? <span><a href="login.html">Login</a></span></p>
+   </div>
+</body>
+</html>
+<script>
+
+    let form = document.getElementById('form');
+    form.addEventListener("submit", myfun);
+
+    function myfun(e) {
+        e.preventDefault();
+
+        let name = document.getElementById('name').value;
+        let mbl = document.getElementById('phoneNo').value;
+        let password = document.getElementById('password').value;
+
+        if(mbl.length == 10 && password.length >= 8) {
+            localStorage.setItem('name', name);
+            localStorage.setItem('mbl', mbl);
+            localStorage.setItem('password', password);
+            alert("Sign up successful!");
+            window.location.href="login.html";
+        } else if(mbl.length != 10) {
+            alert("The mobile number must have 10 digits.");
+        } else if(password.length < 8) {
+            alert('The password must contain at least 8 characters');
+        } else {
+            alert("Enter all fields.");
+        }
+    }
+</script>

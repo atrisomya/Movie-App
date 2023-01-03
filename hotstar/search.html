@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movies</title>
+    <link rel="icon" href="https://secure-media.hotstar.com/web-assets/prod/D+H_favicon.ico">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="carousel.css">
+    <style>
+        #movie_grid {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        #movie_grid > div {
+            border: 1px solid #fff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        #movie_grid > div > img {
+            width: 100%;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        #loader_gif{
+            display: block;
+            margin: auto;
+            width: 5%;
+            display: none;
+        }
+        #loader_gif > img{ 
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+        #movie {
+            margin-top: 20px;
+            margin-left: 10px;
+            height: 25px;
+        }
+        button {
+            color: white;
+            background-color: rgb(147, 58, 207);
+            border-radius: 5px;
+            padding: 8px 12px;
+        }
+        button:hover {
+            background-color: rgb(138, 30, 210);
+        }
+        #search{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <!--
+            <div id="insidenav1">
+            <a href="index.html"><img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="Error"></a>
+            <p>TV</p>
+            <p>Movies</p>
+            <p>Sports</p>
+            <p>Disney+</p>
+            <p id="kids">Kids</p>
+        </div>
+        <div id="insidenav">
+            <button><a href="search.html">Search</a></button>
+            <button><a href="login.html">Login</a></button>
+        </div>
+        -->
+    </div> 
+    <div id="carousel"></div>
+    <div id="search">Search Movies: <input type="text" id="movie"></div>
+    <div id="loader_gif">
+        <img id="ld" src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" alt="Loading">
+    </div>
+    <div id="movie_grid">
+
+    </div>
+</body>
+</html>
+
+<script type="module" src="search.js"></script>
